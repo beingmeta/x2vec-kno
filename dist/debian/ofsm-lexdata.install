@@ -1,0 +1,10 @@
+usr/share/framerd/data/tagger/grammar.dtype
+usr/share/framerd/data/tagger/hookup.dtype
+usr/share/framerd/data/tagger/dictionary.table.ztype
+usr/share/framerd/data/tagger/lexicon.table.ztype
+usr/share/framerd/data/tagger/noun-roots.table.ztype
+usr/share/framerd/data/tagger/verb-roots.table.ztype
+usr/share/framerd/data/tagger/lexicon.index
+usr/share/framerd/data/tagger/noun-roots.index
+usr/share/framerd/data/tagger/verb-roots.index
+usr/share/framerd/data/tagger/.s3root

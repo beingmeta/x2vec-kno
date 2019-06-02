@@ -1,0 +1,68 @@
+Source: ofsm
+Section: Libraries
+Priority: optional
+Maintainer: Kenneth Benefiel Haase <kh@beingmeta.com>
+Build-Depends: 
+	       debhelper(>= 8.0.0),
+	       autotools-dev,
+	       equivs,
+	       dh-systemd,
+	       debsigs,
+	       devscripts,
+	       sqlite3,
+	       libu8-dev (>= 2.5.6),
+	       framerd-dev (>= 4.3.2)
+Standards-Version: 3.9.4
+Homepage: http://www.framerd.org/
+
+Package: ofsm
+Architecture: any
+Depends: kno-core (>= 4.3.2), kno-modules
+Description: Natural language processing development environment
+
+Package: ofsm-dev
+Architecture: any
+Depends: ofsm
+Description: Natural language processing development environment
+
+Package: ofsm-dbg
+Architecture: any
+Section: debug
+Depends: ofsm-dev
+Description: Debug symbols for beingmeta-ofsm
+
+Package: ofsm-lexdata
+Architecture: any
+Depends: ofsm
+Description: Lexical data for use by the beingmeta tagger
+
+Package: x2vec
+Architecture: any
+Depends: framerd-core (>= 4.2.6), framerd-modules
+Description: C implementation of a generalized "word2vec" implementation based on original C code from Google.
+
+Package: x2vec-dev
+Architecture: any
+Depends: x2vec
+Description: C implementation of a generalized "word2vec" implementation based on original C code from Google.
+
+Package: x2vec-dbg
+Architecture: any
+Section: debug
+Depends: x2vec-dev
+Description: Debug symbols for beingmeta-x2vec
+
+Package: beingmeta-lingo
+Architecture: any
+Depends: ofsm, x2vec, ofsm-lexdata
+Description: Meta package for beingmeta NLP tools
+
+Package: beingmeta-lingo-dev
+Architecture: any
+Depends: ofsm-dev, x2vec-dev, beingmeta-lingo
+Description: Meta package for beingmeta NLP tools
+
+Package: beingmeta-lingo-dbg
+Architecture: any
+Depends: ofsm-dbg, x2vec-dbg, beingmeta-lingo-dev
+Description: Meta package for beingmeta NLP tools

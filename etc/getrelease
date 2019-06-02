@@ -1,0 +1,6 @@
+#!/bin/sh
+if which lsb_release 2>&1 > /dev/null; then
+   lsb_release -cs;
+else
+    exit 0;
+fi
